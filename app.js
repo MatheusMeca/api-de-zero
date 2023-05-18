@@ -5,6 +5,7 @@ const app = express();
 const departRoute = require('./routes/departRoute') 
 const depenRoute = require('./routes/depenRoute')
 const funcioRoute = require('./routes/funcioRoute')
+const projetoRoute= require('./routes/projetoRoute')
 
 app.use(express.json()) 
 
@@ -13,6 +14,7 @@ app.use(express.urlencoded({extended: false}))
 app.use('/departamentos', departRoute);
 app.use('/dependentes', depenRoute);
 app.use('/funcionarios', funcioRoute);
+app.use('/projetos', projetoRoute);
 
 //Tratamento de Erros 
 
